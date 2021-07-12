@@ -99,20 +99,20 @@
 
             
 };    
-function demographic(d){
- var table = d3.select("#sel-dataset")
- table.html("")
- console.log(Object.entries(d));
- var entries = Object.entries(d);
- console.log(entries)
- entries.forEach(entry =>{
-     table.append("li").text(entry)
- }
+    function demographic(d){
+    var table = d3.select("#sample-metadata")
+    table.html("")
+    console.log(Object.entries(d));
+    var entries = Object.entries(d);
+    console.log(entries)
+    entries.forEach(([key,value]) => {
+        table.append("li").text(`${key}:${value}`)
+    }
 
-    );
+        );
 
- };
-    
+    };
+        
 
 
     
